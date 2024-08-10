@@ -1,0 +1,300 @@
+:root{
+rgba(128, 64, 0,.5);
+}
+body{
+    background:url("img/w.png") no-repeat;
+    text-align: center;
+    overflow:hidden;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+
+    background-size: cover;
+    background-position:center;
+}
+@font-face{
+    font-family:'flower';
+// src:url(Flower\ Of\ Love.ttf);
+}
+@font-face{
+    font-family:'f6';
+//  src:url(f6.ttf);
+}
+@font-face{
+    font-family:'f3';
+// src:url(f3.otf);
+}
+*{
+    margin: 0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.sidebar{
+    position:fixed;
+    left:0;
+    width: 250px;
+    height: 100%;
+    /* background:white; */
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(128, 64, 0,.5);
+    background:url("img/w.png") no-repeat;
+}
+.sidebar header{
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 150px;
+    background: rgba(128, 64, 0,.5);
+    user-select: none;
+    font-family: "f3";
+    font-size: 3rem;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 90px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    box-sizing: border-box;
+    border-top: 3px solid rgba(128, 64, 0,.5);
+    transition: .4s;
+    text-align: center;
+    border-bottom:5px solid rgb(255, 255, 255);
+
+}
+
+ul li:hover a{
+    padding-left: 50px;
+    color: rgba(128, 64, 0,.5);
+}
+.sidebar ul a i{
+    margin-right: 16px;
+}
+
+.logo{
+    position: fixed;
+
+    /* margin-left: 200px; */
+    margin-top: 250px;
+    letter-spacing: 2px;
+    font-family: 'flower',sans-serif;
+    font-size: 5rem;
+    color:#333;
+    font-weight: bolder;
+}
+
+.logo span{
+    position:relative;
+    font-family: 'flower',sans-serif;
+    color:rgba(128, 64, 0,.5);
+    animation: mymove 5s infinite;
+}
+
+.logop{
+    letter-spacing: 2px;
+    font-family: 'flower',sans-serif;
+    font-size: 5rem;
+    color:#333;
+    font-weight: bolder;
+    margin-left: 500px; ;
+}
+.loge{
+    letter-spacing: 1px;
+    font-family: 'flower',sans-serif;
+    font-size: 4rem;
+    color:#333;
+    font-weight: bolder;
+
+
+}
+.logop span{
+    position:relative;
+
+    font-family: 'flower',sans-serif;
+    color:rgba(128, 64, 0,.5);
+    animation: mymove 5s infinite;
+}
+
+.logo #welcome{
+    font-family:"f3" ;
+    font-size: 2rem;
+    color: rgba(128, 64, 0,.5);
+}
+
+#orders{
+    display: none;
+}
+#cont{
+    display: none;
+}
+.head{
+    color: white;
+    background-color:rgba(128, 64, 0,.5);
+}
+#addp{
+    background-color:rgba(128, 64, 0,.5) ;
+    width: 500px;
+    height: 500px;
+    display: none;
+    position:fixed;
+    margin-left: 600px;
+    margin-top: 100px ;
+    align-items: center;
+    border-radius: 3rem;
+}
+th{
+    border: 1px solid black;
+}
+table{
+    margin-top: 50px;
+    margin-left: 300px;
+    border: 1px solid black;
+}
+td{
+    border: 1px solid black;
+}
+#butons0{
+
+    background-color: rgba(128, 64, 0,.5);
+    border: rgba(128, 64, 0,.5);
+    border-radius: 3px;
+    width: 90px;
+    height: 20px;
+    margin-top: 50px;
+    margin-left:150px ;
+}
+#butons1{
+
+    background-color: rgba(128, 64, 0,.5);
+    border: rgba(128, 64, 0,.5);
+    border-radius: 3px;
+    width: 90px;
+    height: 20px;
+    margin-top: 50px;
+
+}
+#butons2{
+
+    background-color: rgba(128, 64, 0,.5);
+    border: rgba(128, 64, 0,.5);
+    border-radius: 3px;
+    width: 90px;
+    height: 20px;
+    margin-top: 50px;
+    margin-left:750px ;
+}
+#form1{
+    margin-top: 100px;
+    width: 250px;
+    height: 25px;
+
+    border-color: rgba(128, 64, 0,.5);
+}
+#form2{
+
+    width: 250px;
+    height: 25px;
+    border-color: rgba(128, 64, 0,.5);
+}
+#form0{
+    margin-top: 50px;
+    /* margin-left: 100px; */
+}
+
+
+p {
+    margin-top: 40px;
+}
+/* #sel{
+    margin-right: 50px;
+} */
+
+label.custom-select {
+    position: relative;
+    display: inline-block;
+    margin-right: 50px;
+    margin-bottom: 60px;
+}
+
+.custom-select select {
+    display: inline-block;
+    border: 2px solid #bbb;
+    padding: 4px 3px 3px 5px;
+    margin: 0;
+    font: inherit;
+    outline:none; /* remove focus ring from Webkit */
+    line-height: 1.2;
+    background: #f8f8f8;
+
+    -webkit-appearance:none; /* remove the strong OSX influence from Webkit */
+
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+
+}
+
+/* for Webkit's CSS-only solution */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .custom-select select {
+        padding-right:30px;
+    }
+}
+
+/* Since we removed the default focus styles, we have to add our own */
+.custom-select select:focus {
+    -webkit-box-shadow: 0 0 3px 1px rgba(128, 64, 0,.5);
+    -moz-box-shadow: 0 0 3px 1px rgba(128, 64, 0,.5);
+    box-shadow: 0 0 3px 1px rgba(128, 64, 0,.5);
+}
+
+/* Select arrow styling */
+.custom-select:after {
+    content: "\25bc";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 60%;
+    line-height: 30px;
+    padding: 0 7px;
+    background: #bbb;
+    color: white;
+
+    pointer-events:none;
+
+    -webkit-border-radius: 0 6px 6px 0;
+    -moz-border-radius: 0 6px 6px 0;
+    border-radius: 0 6px 6px 0;
+}
+
+.no-pointer-events .custom-select:after {
+    content: none;
+}
+#delp{
+    background-color:rgba(128, 64, 0,.5) ;
+    width: 500px;
+    height: 500px;
+    display: none;
+    position:fixed;
+    margin-left: 600px;
+    margin-top: 100px ;
+    align-items: center;
+    border-radius: 3rem;
+}
+#bt{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border-color: rgba(128, 64, 0,.5);
+    background-color: white;
+}
+
+
+
+

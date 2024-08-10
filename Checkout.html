@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkout - Coffee Shop</title>
+  <link rel="stylesheet" type="text/css" href="Checkout.css">
+</head>
+<body>
+<header>
+  <h1>Checkout</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="locations.html">Locations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="content" id="coffee-shop-checkout">
+  <h2>Order Summary</h2>
+
+  <table class="order-table">
+    <thead>
+    <tr>
+      <th>Item</th>
+      <th>Quantity</th>
+      <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Cappuccino</td>
+      <td>2</td>
+      <td>$8.00</td>
+    </tr>
+    <tr>
+      <td>Latte</td>
+      <td>1</td>
+      <td>$4.50</td>
+    </tr>
+    <tr>
+      <td>Americano</td>
+      <td>3</td>
+      <td>$7.50</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+      <td colspan="2">Total</td>
+      <td>$20.00</td>
+    </tr>
+    </tfoot>
+  </table>
+
+  <h2>Billing Information</h2>
+
+  <form action="submit_order.php" method="post">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="address">Address</label>
+    <textarea id="address" name="address" rows="4" required></textarea>
+
+    <input type="submit" value="Place Order">
+  </form>
+</div>
+
+<footer>
+  <p>&copy; 2023 Coffee Shop. All rights reserved.</p>
+</footer>
+</body>
+</html>

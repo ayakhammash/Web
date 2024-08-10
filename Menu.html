@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hide a div </title>
+
+    <link rel="stylesheet" href="Menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style>
+
+        table {
+            border-collapse: collapse;
+            width: 40%;
+            height: 40%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            right: 50%;
+            bottom: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        th, td {
+            text-align: center;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #996633;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            background-color: #996633;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #804d00;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<table id="customerTable" style="display: none;">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Actions</th>
+    </tr>
+    <tr>
+        <td>ID 1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><button>Remove</button></td>
+    </tr>
+    <tr>
+        <td>ID 2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><button>Remove</button></td>
+    </tr>
+</table>
+
+<table id="orderTable" style="display: none;">
+    <tr>
+        <th>ID</th>
+        <th>Order</th>
+        <th>Name</th>
+        <th>Actions</th>
+    </tr>
+    <tr>
+        <td>ID 1</td>
+        <td> </td>
+        <td> </td>
+        <td><button>Remove</button></td>
+    </tr>
+    <tr>
+        <td>ID 2</td>
+        <td> </td>
+        <td> </td>
+        <td><button>Remove</button></td>
+    </tr>
+</table>
+
+<table id="productTable" style="display: none;">
+    <tr>
+        <th>ID</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Actions</th>
+    </tr>
+    <tr>
+        <td>ID 1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><button>Remove</button></td>
+    </tr>
+    <tr>
+        <td>ID 2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><button>Remove</button></td>
+    </tr>
+</table>
+
+<input type="checkbox" id="check">
+<label for="check">
+    <i class="fas fa-bars" id="btn"></i>
+    <i class="fas fa-times" id="cancel"></i>
+</label>
+<div class="sidebar">
+    <header>Coffee Cup</header>
+    <ul>
+        <li><a href="#" id="customerLink"><i class="fas fa-user"></i>Customer</a></li>
+        <li><a href="#" id="addProductLink"><i class="fas fa-coffee"></i>Product</a></li>
+        <li><a href="#" id="orderLink"><i class="fas fa-stream"></i>Orders</a></li>
+        <li><a href="Events.html"><i class="fas
+fa-calendar"></i>Events</a></li>
+
+        <li><a href="AboutUs.html"><i class="far
+fa-question-circle"></i>About Us</a></li>
+
+        <li><a href="ContactUs.html"><i class="far
+fa-envelope"></i>Contact Us</a></li>
+
+
+
+        <li><a href="Location.html"><i class="far
+fas fa-map-marker"></i>Location</a></li>
+        <li><a href="Checkout.html"><i class="far
+fas fa-check"></i>Checkout</a></li>
+
+    </ul>
+</div>
+<section></section>
+
+<script>
+    const customerLink = document.getElementById('customerLink');
+    const customerTable = document.getElementById('customerTable');
+
+    let isCustomerTableVisible = false;
+
+    customerLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        console.log('Customer link was clicked.');
+
+        if (isCustomerTableVisible) {
+            // Hide the customer table
+            customerTable.style.display = 'none';
+            isCustomerTableVisible = false;
+        } else {
+            // Show the customer table
+            customerTable.style.display = 'block';
+            isCustomerTableVisible = true;
+        }
+    });
+
+    const orderLink = document.getElementById('orderLink');
+    const orderTable = document.getElementById('orderTable');
+
+    let isOrderTableVisible = false;
+
+    orderLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        console.log('Order link was clicked.');
+
+        if (isOrderTableVisible) {
+            // Hide the order table
+            orderTable.style.display = 'none';
+            isOrderTableVisible = false;
+        } else {
+            // Show the order table
+            orderTable.style.display = 'block';
+            isOrderTableVisible = true;
+        }
+    });
+
+    const addProductLink = document.getElementById('addProductLink');
+    const productTable = document.getElementById('productTable');
+
+    let isProductTableVisible = false;
+
+    addProductLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        console.log('Add Product link was clicked.');
+
+        if (isProductTableVisible) {
+            // Hide the product table
+            productTable.style.display = 'none';
+            isProductTableVisible = false;
+        } else {
+            // Show the product table
+            productTable.style.display = 'block';
+            isProductTableVisible = true;
+        }
+    });
+</script>
+</body>
+</html>

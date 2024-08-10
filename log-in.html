@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coffee Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #F2E8D7;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      color: #4E3629;
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+
+    form {
+      background-color: rgba(128, 64, 0,.5);
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #4E3629;
+      font-size: 18px;
+    }
+
+    input[type="email"], input[type="password"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      display: block;
+      margin: auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #FFF;
+      background-color: #4E3629;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .coffee-cup {
+      display: block;
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 150px;
+      height: 200px;
+      background-color: #4E3629;
+      border-radius: 0 50px 50px 50px;
+      transform: rotate(-10deg);
+      animation: move-coffee 3s ease-in-out infinite alternate;
+    }
+
+    .coffee-cup:before, .coffee-cup:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -20px;
+      width: 80px;
+      height: 20px;
+      background-color: #FFF;
+      border-radius: 50%;
+      transform: rotate(10deg);
+    }
+
+    .coffee-cup:before {
+      left: -10px;
+    }
+
+    .coffee-cup:after {
+      right: -10px;
+    }
+
+    @keyframes move-coffee {
+      0% {
+        top: -50px;
+        right: -50px;
+      }
+      50% {
+        top: -60px;
+        right: -80px;
+      }
+      100% {
+        top: -50px;
+        right: -50px;
+      }
+    }
+  </style>
+</head>
+<body>
+<h1>Coffee Cup Login</h1>
+<form>
+  <label for="email">Email Address:</label>
+  <input type="email" name="email" id="email" required>
+  <label for="password">Password:</label>
+  <input type="password" name="password" id="password" required>
+  <input type="submit" value="Log In">
+  <span class="coffee-cup"></span>
+
+  <span class="coffee-cup"></span>
+  <p>If you are not a member, please <a style="color:rgba(128, 64, 0)" href="sign-up.html">sign up here</a>.</p>
+</form>
+</body>
+</html>

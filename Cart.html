@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coffee Shop Cart</title>
+  <link rel="stylesheet" type="text/css" href="Cart.css">
+</head>
+<body>
+<h1>Coffee Shop Cart</h1>
+
+<div class="cart">
+  <h2>Your Cart</h2>
+  <?php
+      session_start();
+
+      // Check if cart is empty
+      if(empty($_SESSION['cart'])) {
+        echo "<p>Your cart is empty.</p>
+
+</div>
+
+<div class="menu">
+  <h2>Menu</h2>
+  <form method="POST" action="add_to_cart.php">
+    <label>Item Name:</label>
+    <input type="text" name="name" required>
+    <input type="submit" value="Add to Cart">
+  </form>
+</div>
+
+</body>
+</html>
